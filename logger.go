@@ -11,6 +11,11 @@ func Fatal(format string, v ...interface{}) {
   errlog.Fatalf(format, v...)
 }
 
+// Error will log a message to Stderr
+func Error(format string, v ...interface{}) {
+  errlog.Printf(format, v...)
+}
+
 // Info will log a message to Stdout
 func Info(v ...interface{}) {
   stdlog.Println(v...)
