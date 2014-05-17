@@ -29,11 +29,11 @@ func Error(format string, v ...interface{}) {
 }
 
 // Info will log a message to Stdout
-func Info(v ...interface{}) {
-  stdlog.Println(v...)
+func Info(format string, v ...interface{}) {
+  stdlog.Printf(format, v...)
 }
 
 // Debug will log a message to Stdout if DEBUG is enabled
-func Debug(v ...interface{}) {
-  if IfDebug() { stdlog.Println(v...) }
+func Debug(format string, v ...interface{}) {
+  if IfDebug() { stdlog.Printf(format, v...) }
 }
